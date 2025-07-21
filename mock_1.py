@@ -86,4 +86,4 @@ if st.session_state.submitted:
                   
                 
             )
-    st.success(f"Your Score: {score} / {len(questions)}")
+  
