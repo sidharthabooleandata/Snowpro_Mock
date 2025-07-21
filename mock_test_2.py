@@ -88,7 +88,7 @@ questions = [
     {"question": "Q77. True or False: Virtual warehouses are schema-level objects.", "options": ["True", "False"], "answer": "False"},
     {"question": "Q78. Which privilege is needed for cloning?", "options": ["OWNERSHIP on source", "CREATE_TABLE only", "CLONE privilege", "CREATE DATABASE"], "answer": "OWNERSHIP on source"},
     {"question": "Q79. True or False: Materialized view uses warehouse at query time.", "options": ["True", "False"], "answer": "True"},
-    {"question": "Q80. To monitor warehouse auto-scale, check:", "options": ["WAREHOUSE_LOAD_HISTORY", "QUERY_HISTORY", "WAREHOUSE_METERING_HISTORY", "ACCOUNT_USAGE_CREDITS"], "answer": "WAREHOUSE_METERING_HISTORY"}
+    {"question": "Q80. To monitor warehouse auto-scale, check:", "options": ["WAREHOUSE_LOAD_HISTORY", "QUERY_HISTORY", "WAREHOUSE_METERING_HISTORY", "ACCOUNT_USAGE_CREDITS"], "answer": "WAREHOUSE_METERING_HISTORY"},
     {"question": "Q81. True or False: Cross-account share also replicates clones.", "options": ["True", "False"], "answer": "False"},
     {"question": "Q82. External table Time Travel?", "options": ["Not supported", "1 day", "0 days", "Cloned ext tables inherit"], "answer": "Not supported"},
     {"question": "Q83. A COPY INTO to external stage uses:", "options": ["Warehouse compute", "Cloud services", "Stage overhead", "Storage only"], "answer": "Warehouse compute"},
@@ -118,7 +118,8 @@ with st.form("mock_exam_form"):
         st.radio(
             label="",
             options=q["options"],
-            key=f"q{i}"
+            key=f"q{i}",
+            index=None 
         )
         st.markdown("---")
     
